@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: 3c677e61fbe7f174ea322773a42d24f1
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: tableLeft_brace01
+    100004: tableLeft_plank01
+    100006: tableLeft_plank02
+    100008: tableLeft_plank03
+    100010: tableRight_brace01
+    100012: tableRight_plank01
+    100014: tableRight_plank02
+    100016: tableRight_plank03
+    100018: tableTop_plank01
+    100020: tableTop_plank02
+    100022: tableTop_plank03
+    400000: //RootNode
+    400002: tableLeft_brace01
+    400004: tableLeft_plank01
+    400006: tableLeft_plank02
+    400008: tableLeft_plank03
+    400010: tableRight_brace01
+    400012: tableRight_plank01
+    400014: tableRight_plank02
+    400016: tableRight_plank03
+    400018: tableTop_plank01
+    400020: tableTop_plank02
+    400022: tableTop_plank03
+    2300000: tableLeft_brace01
+    2300002: tableLeft_plank01
+    2300004: tableLeft_plank02
+    2300006: tableLeft_plank03
+    2300008: tableRight_brace01
+    2300010: tableRight_plank01
+    2300012: tableRight_plank02
+    2300014: tableRight_plank03
+    2300016: tableTop_plank01
+    2300018: tableTop_plank02
+    2300020: tableTop_plank03
+    3300000: tableLeft_brace01
+    3300002: tableLeft_plank01
+    3300004: tableLeft_plank02
+    3300006: tableLeft_plank03
+    3300008: tableRight_brace01
+    3300010: tableRight_plank01
+    3300012: tableRight_plank02
+    3300014: tableRight_plank03
+    3300016: tableTop_plank01
+    3300018: tableTop_plank02
+    3300020: tableTop_plank03
+    4300000: tableTop_plank03
+    4300002: tableTop_plank02
+    4300004: tableTop_plank01
+    4300006: tableRight_plank03
+    4300008: tableRight_plank02
+    4300010: tableRight_plank01
+    4300012: tableLeft_plank03
+    4300014: tableLeft_plank02
+    4300016: tableLeft_plank01
+    4300018: tableRight_brace01
+    4300020: tableLeft_brace01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
