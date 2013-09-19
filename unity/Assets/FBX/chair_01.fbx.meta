@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: c9d2baf3d741e4d4a9ede31365b1e30d
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: chair_backFabric
+    100004: chair_backFrame
+    100006: chair_lower
+    100008: chair_upper
+    100010: leftArmPad
+    100012: polySurface5
+    100014: polySurface6
+    100016: polySurface7
+    100018: polySurface9
+    100020: rightArmPad
+    100022: seatCushion
+    100024: wheel
+    100026: wheel1
+    100028: wheel2
+    100030: wheel3
+    100032: wheel4
+    100034: wheelBase
+    400000: //RootNode
+    400002: chair_backFabric
+    400004: chair_backFrame
+    400006: chair_lower
+    400008: chair_upper
+    400010: leftArmPad
+    400012: polySurface5
+    400014: polySurface6
+    400016: polySurface7
+    400018: polySurface9
+    400020: rightArmPad
+    400022: seatCushion
+    400024: wheel
+    400026: wheel1
+    400028: wheel2
+    400030: wheel3
+    400032: wheel4
+    400034: wheelBase
+    2300000: chair_backFabric
+    2300002: chair_backFrame
+    2300004: leftArmPad
+    2300006: polySurface7
+    2300008: polySurface9
+    2300010: rightArmPad
+    2300012: seatCushion
+    2300014: wheel
+    2300016: wheel1
+    2300018: wheel2
+    2300020: wheel3
+    2300022: wheel4
+    2300024: wheelBase
+    3300000: chair_backFabric
+    3300002: chair_backFrame
+    3300004: leftArmPad
+    3300006: polySurface7
+    3300008: polySurface9
+    3300010: rightArmPad
+    3300012: seatCushion
+    3300014: wheel
+    3300016: wheel1
+    3300018: wheel2
+    3300020: wheel3
+    3300022: wheel4
+    3300024: wheelBase
+    4300000: seatCushion
+    4300002: chair_backFabric
+    4300004: chair_backFrame
+    4300006: polySurface9
+    4300008: leftArmPad
+    4300010: polySurface7
+    4300012: rightArmPad
+    4300014: wheelBase
+    4300016: wheel
+    4300018: wheel1
+    4300020: wheel2
+    4300022: wheel3
+    4300024: wheel4
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .425000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
