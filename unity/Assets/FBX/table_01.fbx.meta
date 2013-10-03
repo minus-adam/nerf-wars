@@ -15,6 +15,7 @@ ModelImporter:
     100018: tableTop_plank01
     100020: tableTop_plank02
     100022: tableTop_plank03
+    100024: tableLeft_brace02
     400000: //RootNode
     400002: tableLeft_brace01
     400004: tableLeft_plank01
@@ -27,6 +28,7 @@ ModelImporter:
     400018: tableTop_plank01
     400020: tableTop_plank02
     400022: tableTop_plank03
+    400024: tableLeft_brace02
     2300000: tableLeft_brace01
     2300002: tableLeft_plank01
     2300004: tableLeft_plank02
@@ -38,6 +40,7 @@ ModelImporter:
     2300016: tableTop_plank01
     2300018: tableTop_plank02
     2300020: tableTop_plank03
+    2300022: tableLeft_brace02
     3300000: tableLeft_brace01
     3300002: tableLeft_plank01
     3300004: tableLeft_plank02
@@ -49,6 +52,7 @@ ModelImporter:
     3300016: tableTop_plank01
     3300018: tableTop_plank02
     3300020: tableTop_plank03
+    3300022: tableLeft_brace02
     4300000: tableTop_plank03
     4300002: tableTop_plank02
     4300004: tableTop_plank01
@@ -60,6 +64,7 @@ ModelImporter:
     4300016: tableLeft_plank01
     4300018: tableRight_brace01
     4300020: tableLeft_brace01
+    4300022: tableLeft_brace02
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -14,6 +14,9 @@ ModelImporter:
     100016: picnicTable_topPlank02
     100018: polySurface1
     100020: transform1
+    100022: picnicTable_topPlank03
+    100024: picnicTable_topPlank04
+    100026: picnicTable_topPlank05
     400000: //RootNode
     400002: picnicTable_backBench
     400004: picnicTable_frontBench
@@ -25,6 +28,9 @@ ModelImporter:
     400016: picnicTable_topPlank02
     400018: polySurface1
     400020: transform1
+    400022: picnicTable_topPlank03
+    400024: picnicTable_topPlank04
+    400026: picnicTable_topPlank05
     2300000: picnicTable_backBench
     2300002: picnicTable_frontBench
     2300004: picnicTable_leftLeg
@@ -34,6 +40,9 @@ ModelImporter:
     2300012: picnicTable_topPlank01
     2300014: picnicTable_topPlank02
     2300016: polySurface1
+    2300018: picnicTable_topPlank03
+    2300020: picnicTable_topPlank04
+    2300022: picnicTable_topPlank05
     3300000: picnicTable_backBench
     3300002: picnicTable_frontBench
     3300004: picnicTable_leftLeg
@@ -43,6 +52,9 @@ ModelImporter:
     3300012: picnicTable_topPlank01
     3300014: picnicTable_topPlank02
     3300016: polySurface1
+    3300018: picnicTable_topPlank03
+    3300020: picnicTable_topPlank04
+    3300022: picnicTable_topPlank05
     4300000: picnicTable_rightLeg
     4300002: picnicTable_rightSupport
     4300004: picnicTable_leftLeg
@@ -52,6 +64,9 @@ ModelImporter:
     4300012: picnicTable_frontBench
     4300014: picnicTable_backBench
     4300016: polySurface1
+    4300018: picnicTable_topPlank03
+    4300020: picnicTable_topPlank04
+    4300022: picnicTable_topPlank05
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 61e1662dce1eeea488b7a1545b0e2e57
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: window01
+    100002: window02
+    100004: window03
+    100006: window04
+    100008: window05
+    100010: window06
+    100012: window07
+    100014: window08
+    100016: window09
+    100018: window10
+    100020: window11
+    100022: window12
+    100024: window13
+    100026: window_wall 1
+    100028: //RootNode
+    400000: window01
+    400002: window02
+    400004: window03
+    400006: window04
+    400008: window05
+    400010: window06
+    400012: window07
+    400014: window08
+    400016: window09
+    400018: window10
+    400020: window11
+    400022: window12
+    400024: window13
+    400026: window_wall 1
+    400028: //RootNode
+    2300000: window01
+    2300002: window02
+    2300004: window03
+    2300006: window04
+    2300008: window05
+    2300010: window06
+    2300012: window07
+    2300014: window08
+    2300016: window09
+    2300018: window10
+    2300020: window11
+    2300022: window12
+    2300024: window13
+    2300026: window_wall 1
+    3300000: window01
+    3300002: window02
+    3300004: window03
+    3300006: window04
+    3300008: window05
+    3300010: window06
+    3300012: window07
+    3300014: window08
+    3300016: window09
+    3300018: window10
+    3300020: window11
+    3300022: window12
+    3300024: window13
+    3300026: window_wall 1
+    4300000: window_wall
+    4300002: window05
+    4300004: window07
+    4300006: window06
+    4300008: window08
+    4300010: window01
+    4300012: window03
+    4300014: window02
+    4300016: window04
+    4300018: window09
+    4300020: window11
+    4300022: window10
+    4300024: window12
+    4300026: window13
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
