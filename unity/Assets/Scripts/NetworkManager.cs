@@ -5,8 +5,8 @@ public class NetworkManager : Photon.MonoBehaviour {
 	
 	private Vector3 spawnLocation = new Vector3(-42.75074f,5.6206f,-8.175415f);
 	
-	
 	void Start() {
+		
 		PhotonNetwork.ConnectUsingSettings("alpha 0.1");
 		
 	}
@@ -25,6 +25,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 	}
 	
 	void OnJoinedRoom() {
+		Screen.showCursor = false;
 		//GameObject myPlayer = PhotonNetwork.Instantiate("First Person Controller",spawnLocation, Quaternion.identity,0);	
 	}
 	
