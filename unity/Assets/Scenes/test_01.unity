@@ -7471,7 +7471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet_prefab: {fileID: 100000, guid: d464ffd89423e4b92bb0b2acec74df85, type: 2}
-  bulletImpulse: 100
+  bulletImpulse: 75
 --- !u!1001 &716000197
 Prefab:
   m_ObjectHideFlags: 0
