@@ -4,12 +4,19 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
 	
 	public GameObject fireEffect;
-	float lifeSpan = 3.0f;
+	float lifeSpan = 5;
 	Vector3 lastVelocity;
 	
 	// Use this for initialization
 	void Start () {
 		
+	}
+	
+	void Update() {
+		lifeSpan -= Time.deltaTime;
+		if(lifeSpan <= 0) {
+			Destroy(gameObject);	
+		}
 	}
 	
 	void FixedUpdate() {
@@ -26,9 +33,8 @@ public class BulletScript : MonoBehaviour {
 		
 		if(collision.gameObject.tag == "Monitor") {
 			Debug.Log("Hi");
-			ContactPoint contact = collision.contacts[0];
-			gameObject.rigidbody.isKinematic = true;
-			transform.position = contact.point - lastVelocity.normalized;
+			var stickyJoint = gameObject.AddComponent<FixedJoint>();
+			stickyJoint.connectedBody = collision.rigidbody;
 		}
 		
 	}

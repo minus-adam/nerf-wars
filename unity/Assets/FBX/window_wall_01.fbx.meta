@@ -18,6 +18,13 @@ ModelImporter:
     100024: window13
     100026: window_wall 1
     100028: //RootNode
+    100030: polySurface4
+    100032: window010
+    100034: window14
+    100036: window15
+    100038: window16
+    100040: window17
+    100042: window_wall
     400000: window01
     400002: window02
     400004: window03
@@ -33,6 +40,13 @@ ModelImporter:
     400024: window13
     400026: window_wall 1
     400028: //RootNode
+    400030: polySurface4
+    400032: window010
+    400034: window14
+    400036: window15
+    400038: window16
+    400040: window17
+    400042: window_wall
     2300000: window01
     2300002: window02
     2300004: window03
@@ -47,6 +61,12 @@ ModelImporter:
     2300022: window12
     2300024: window13
     2300026: window_wall 1
+    2300028: polySurface4
+    2300030: window010
+    2300032: window14
+    2300034: window15
+    2300036: window16
+    2300038: window17
     3300000: window01
     3300002: window02
     3300004: window03
@@ -61,6 +81,12 @@ ModelImporter:
     3300022: window12
     3300024: window13
     3300026: window_wall 1
+    3300028: polySurface4
+    3300030: window010
+    3300032: window14
+    3300034: window15
+    3300036: window16
+    3300038: window17
     4300000: window_wall
     4300002: window05
     4300004: window07
@@ -75,6 +101,12 @@ ModelImporter:
     4300022: window10
     4300024: window12
     4300026: window13
+    4300028: window010
+    4300030: window14
+    4300032: window15
+    4300034: window16
+    4300036: window17
+    4300038: polySurface4
     9500000: //RootNode
   materials:
     importMaterials: 1
