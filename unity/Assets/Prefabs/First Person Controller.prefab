@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 148: {fileID: 14800000}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -316,6 +317,21 @@ MonoBehaviour:
   bullet_prefab: {fileID: 100006, guid: a8b64e5ae94454dcf8eced4de9379263, type: 2}
   bulletImpulse: 20
   bulletMax: 5
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 457546dc328e9415fb599ae7956f27ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 7
+  crchSpeed: 3
+  runSpeed: 20
+  speed: 0
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
