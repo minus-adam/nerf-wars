@@ -5,7 +5,7 @@ public class CrouchAndRun : MonoBehaviour
 {
     public float walkSpeed = 10; // regular speed
     public float crchSpeed = 3; // crouching speed
-    public float runSpeed = 20; // run speed
+    public float runSpeed = 15; // run speed
 	public float speed; 
  
     private CharacterMotor chMotor;
@@ -14,7 +14,7 @@ public class CrouchAndRun : MonoBehaviour
 	
 	private bool canRun = true;
 	private bool isRunning = false;
-	public float runTime = 6f;
+	public float runTime = 5f;
 	public float runCoolDownTime = 5f;
  
     // Use this for initialization
@@ -39,14 +39,22 @@ public class CrouchAndRun : MonoBehaviour
 				isRunning =false;
 				canRun = false;
 			}
-		} else if(!canRun && !isRunning && !Input.GetKey ("left shift")) {
+		} else {
+			runTime += Time.deltaTime;
+			if(runTime > 5f) {
+				runTime = 5f;
+			}
+		}
+		
+		
+		if(!canRun && !isRunning && !Input.GetKey ("left shift")) {
 			Debug.Log ( "Not running time to cool down");
 			runCoolDownTime -= Time.deltaTime;
 			Debug.Log (runCoolDownTime);
 			if(runCoolDownTime <= 0 ) {
 				canRun = true;
 				runCoolDownTime = 5f;
-				runTime = 7f;
+				runTime = 5f;
 			}
 		}
        	
