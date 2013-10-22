@@ -11,6 +11,11 @@ public class CrouchAndRun : MonoBehaviour
     private CharacterMotor chMotor;
     private Transform tr;
     private float dist; // distance to ground
+	
+	private bool canRun = true;
+	private bool isRunning = false;
+	public float runTime = 6f;
+	public float runCoolDownTime = 5f;
  
     // Use this for initialization
     void Start () 
@@ -25,13 +30,43 @@ public class CrouchAndRun : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ()
     {
-       float vScale = 2.0f;
+	   	// setting up max sprint time and cool down update
+		if (isRunning && (Input.GetKey ("w") || Input.GetKey ("a") || Input.GetKey ("d") || Input.GetKey ("s") )) {
+			Debug.Log ("running");
+			runTime -= Time.deltaTime;
+			if(runTime <= 0) {
+				Debug.Log ("start walking");
+				isRunning =false;
+				canRun = false;
+			}
+		} else if(!canRun && !isRunning && !Input.GetKey ("left shift")) {
+			Debug.Log ( "Not running time to cool down");
+			runCoolDownTime -= Time.deltaTime;
+			Debug.Log (runCoolDownTime);
+			if(runCoolDownTime <= 0 ) {
+				canRun = true;
+				runCoolDownTime = 5f;
+				runTime = 7f;
+			}
+		}
+       	
+		float vScale = 2.0f;
         
  		speed = walkSpeed;
         if ((Input.GetKey("left shift") || Input.GetKey("right shift")) && chMotor.grounded)
         {
-            speed = runSpeed;       
+            if(canRun) {
+				speed = runSpeed;
+				isRunning = true;
+			} else {
+				
+			}
         }
+		
+		if (Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift")) {
+			isRunning = false;
+			speed = walkSpeed;
+		}
  
         if (Input.GetKey("c"))
         { // press C to crouch
