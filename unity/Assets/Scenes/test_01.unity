@@ -7965,6 +7965,8 @@ MonoBehaviour:
   crchSpeed: 3
   runSpeed: 20
   speed: 0
+  runTime: 10
+  runCoolDownTime: 5
 --- !u!1001 &716000197
 Prefab:
   m_ObjectHideFlags: 0
@@ -19129,11 +19131,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400032, guid: ceed2787b0c874d6fad57104606393aa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -44.5581856
+      value: -44.5533791
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: ceed2787b0c874d6fad57104606393aa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .543361902
+      value: .537376523
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: ceed2787b0c874d6fad57104606393aa, type: 2}
       propertyPath: m_LocalPosition.z
@@ -21922,7 +21924,7 @@ Transform:
   m_PrefabInternal: {fileID: 1659720554}
   m_GameObject: {fileID: 1915953234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.5581856, y: .543361902, z: -12.3730907}
+  m_LocalPosition: {x: -44.5533791, y: .537376523, z: -12.3730907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 137585723}
