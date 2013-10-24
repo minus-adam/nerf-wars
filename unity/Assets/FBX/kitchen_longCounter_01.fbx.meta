@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 896d766b57da9694b8856cd685c48c56
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: cabinet_underSink
+    100002: counter_baseboard
+    100004: counter_cabinetDoor_01
+    100006: counter_cabinetDoor_02
+    100008: counter_cabinetDoor_03
+    100010: counter_cabinetDrawer_01
+    100012: counter_cabinetHandle_01
+    100014: counter_cabinetHandle_02
+    100016: counter_cabinetHandle_03
+    100018: counter_cabinetHandle_04
+    100020: counter_top
+    100022: //RootNode
+    100024: pasted__pCube2
+    100026: sink_leftDoor
+    100028: sink_rightDoor
+    400000: cabinet_underSink
+    400002: counter_baseboard
+    400004: counter_cabinetDoor_01
+    400006: counter_cabinetDoor_02
+    400008: counter_cabinetDoor_03
+    400010: counter_cabinetDrawer_01
+    400012: counter_cabinetHandle_01
+    400014: counter_cabinetHandle_02
+    400016: counter_cabinetHandle_03
+    400018: counter_cabinetHandle_04
+    400020: counter_top
+    400022: //RootNode
+    400024: pasted__pCube2
+    400026: sink_leftDoor
+    400028: sink_rightDoor
+    2300000: cabinet_underSink
+    2300002: counter_baseboard
+    2300004: counter_cabinetDoor_01
+    2300006: counter_cabinetDoor_02
+    2300008: counter_cabinetDoor_03
+    2300010: counter_cabinetDrawer_01
+    2300012: counter_cabinetHandle_01
+    2300014: counter_cabinetHandle_02
+    2300016: counter_cabinetHandle_03
+    2300018: counter_cabinetHandle_04
+    2300020: counter_top
+    2300022: pasted__pCube2
+    2300024: sink_leftDoor
+    2300026: sink_rightDoor
+    3300000: cabinet_underSink
+    3300002: counter_baseboard
+    3300004: counter_cabinetDoor_01
+    3300006: counter_cabinetDoor_02
+    3300008: counter_cabinetDoor_03
+    3300010: counter_cabinetDrawer_01
+    3300012: counter_cabinetHandle_01
+    3300014: counter_cabinetHandle_02
+    3300016: counter_cabinetHandle_03
+    3300018: counter_cabinetHandle_04
+    3300020: counter_top
+    3300022: pasted__pCube2
+    3300024: sink_leftDoor
+    3300026: sink_rightDoor
+    4300000: counter_top
+    4300002: counter_cabinetDoor_01
+    4300004: counter_cabinetDoor_02
+    4300006: counter_cabinetDrawer_01
+    4300008: counter_cabinetDoor_03
+    4300010: sink_rightDoor
+    4300012: sink_leftDoor
+    4300014: counter_cabinetHandle_04
+    4300016: counter_cabinetHandle_03
+    4300018: counter_cabinetHandle_02
+    4300020: counter_cabinetHandle_01
+    4300022: cabinet_underSink
+    4300024: counter_baseboard
+    4300026: pasted__pCube2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

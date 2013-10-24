@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: 13727fe4972ddea4caff6a5c3ee3b179
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: fridge_base
+    100002: fridge_handleBase_01
+    100004: fridge_handleBase_02
+    100006: fridge_handleBase_03
+    100008: fridge_handleBase_04
+    100010: fridge_leftDoor
+    100012: fridge_leftHandle
+    100014: fridge_leftHandle1
+    100016: fridge_rightDoor
+    100018: //RootNode
+    400000: fridge_base
+    400002: fridge_handleBase_01
+    400004: fridge_handleBase_02
+    400006: fridge_handleBase_03
+    400008: fridge_handleBase_04
+    400010: fridge_leftDoor
+    400012: fridge_leftHandle
+    400014: fridge_leftHandle1
+    400016: fridge_rightDoor
+    400018: //RootNode
+    2300000: fridge_base
+    2300002: fridge_handleBase_01
+    2300004: fridge_handleBase_02
+    2300006: fridge_handleBase_03
+    2300008: fridge_handleBase_04
+    2300010: fridge_leftDoor
+    2300012: fridge_leftHandle
+    2300014: fridge_leftHandle1
+    2300016: fridge_rightDoor
+    3300000: fridge_base
+    3300002: fridge_handleBase_01
+    3300004: fridge_handleBase_02
+    3300006: fridge_handleBase_03
+    3300008: fridge_handleBase_04
+    3300010: fridge_leftDoor
+    3300012: fridge_leftHandle
+    3300014: fridge_leftHandle1
+    3300016: fridge_rightDoor
+    4300000: fridge_leftHandle
+    4300002: fridge_leftHandle1
+    4300004: fridge_leftDoor
+    4300006: fridge_rightDoor
+    4300008: fridge_handleBase_02
+    4300010: fridge_handleBase_01
+    4300012: fridge_handleBase_03
+    4300014: fridge_handleBase_04
+    4300016: fridge_base
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

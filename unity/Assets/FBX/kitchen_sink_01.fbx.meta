@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: f981b7acfab3c604c92850b34d4d9cbd
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: group
+    100002: //RootNode
+    100004: pasted__group1
+    100006: pCylinder3
+    100008: pCylinder8
+    100010: sink_crossBar
+    100012: sink_faucetBase
+    100014: sink_faucetSpout
+    100016: sink_leftHandle
+    100018: sink_rightHandle
+    100020: sink_spout
+    100022: sink_tub
+    100024: sink_waterFilter
+    400000: group
+    400002: //RootNode
+    400004: pasted__group1
+    400006: pCylinder3
+    400008: pCylinder8
+    400010: sink_crossBar
+    400012: sink_faucetBase
+    400014: sink_faucetSpout
+    400016: sink_leftHandle
+    400018: sink_rightHandle
+    400020: sink_spout
+    400022: sink_tub
+    400024: sink_waterFilter
+    2300000: pCylinder3
+    2300002: pCylinder8
+    2300004: sink_crossBar
+    2300006: sink_faucetBase
+    2300008: sink_faucetSpout
+    2300010: sink_leftHandle
+    2300012: sink_rightHandle
+    2300014: sink_spout
+    2300016: sink_tub
+    2300018: sink_waterFilter
+    3300000: pCylinder3
+    3300002: pCylinder8
+    3300004: sink_crossBar
+    3300006: sink_faucetBase
+    3300008: sink_faucetSpout
+    3300010: sink_leftHandle
+    3300012: sink_rightHandle
+    3300014: sink_spout
+    3300016: sink_tub
+    3300018: sink_waterFilter
+    4300000: sink_tub
+    4300002: sink_faucetBase
+    4300004: sink_crossBar
+    4300006: pCylinder3
+    4300008: sink_rightHandle
+    4300010: sink_leftHandle
+    4300012: sink_spout
+    4300014: sink_waterFilter
+    4300016: sink_faucetSpout
+    4300018: pCylinder8
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

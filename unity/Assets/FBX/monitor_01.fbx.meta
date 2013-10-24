@@ -7,16 +7,29 @@ ModelImporter:
     100002: //RootNode
     100004: monitor_base
     100006: monitor_screen
+    100008: monitor_screen 1
+    100010: monitor_top
+    100012: transform1
+    100014: transform2
     400000: group1
     400002: //RootNode
     400004: monitor_base
     400006: monitor_screen
+    400008: monitor_screen 1
+    400010: monitor_top
+    400012: transform1
+    400014: transform2
     2300000: monitor_base
     2300002: monitor_screen
+    2300004: monitor_screen 1
+    2300006: monitor_top
     3300000: monitor_base
     3300002: monitor_screen
+    3300004: monitor_screen 1
+    3300006: monitor_top
     4300000: monitor_base
     4300002: monitor_screen
+    4300004: monitor_top
     9500000: //RootNode
   materials:
     importMaterials: 1

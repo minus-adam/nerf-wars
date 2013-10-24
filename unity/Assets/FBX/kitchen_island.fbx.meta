@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: e00442ee86ec518409d65bd8c6348048
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: counter_cabinetDoor_04
+    100002: counter_cabinetDoor_05
+    100004: counter_cabinetDoor_06
+    100006: counter_cabinetDoor_07
+    100008: counter_cabinetHandle_05
+    100010: counter_cabinetHandle_06
+    100012: counter_cabinetHandle_07
+    100014: counter_cabinetHandle_08
+    100016: island_base
+    100018: island_top
+    100020: //RootNode
+    400000: counter_cabinetDoor_04
+    400002: counter_cabinetDoor_05
+    400004: counter_cabinetDoor_06
+    400006: counter_cabinetDoor_07
+    400008: counter_cabinetHandle_05
+    400010: counter_cabinetHandle_06
+    400012: counter_cabinetHandle_07
+    400014: counter_cabinetHandle_08
+    400016: island_base
+    400018: island_top
+    400020: //RootNode
+    2300000: counter_cabinetDoor_04
+    2300002: counter_cabinetDoor_05
+    2300004: counter_cabinetDoor_06
+    2300006: counter_cabinetDoor_07
+    2300008: counter_cabinetHandle_05
+    2300010: counter_cabinetHandle_06
+    2300012: counter_cabinetHandle_07
+    2300014: counter_cabinetHandle_08
+    2300016: island_base
+    2300018: island_top
+    3300000: counter_cabinetDoor_04
+    3300002: counter_cabinetDoor_05
+    3300004: counter_cabinetDoor_06
+    3300006: counter_cabinetDoor_07
+    3300008: counter_cabinetHandle_05
+    3300010: counter_cabinetHandle_06
+    3300012: counter_cabinetHandle_07
+    3300014: counter_cabinetHandle_08
+    3300016: island_base
+    3300018: island_top
+    4300000: island_base
+    4300002: island_top
+    4300004: counter_cabinetDoor_04
+    4300006: counter_cabinetDoor_05
+    4300008: counter_cabinetHandle_05
+    4300010: counter_cabinetHandle_06
+    4300012: counter_cabinetDoor_06
+    4300014: counter_cabinetDoor_07
+    4300016: counter_cabinetHandle_07
+    4300018: counter_cabinetHandle_08
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
