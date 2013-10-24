@@ -1,11 +1,12 @@
 using UnityEngine;
-using System.Collections;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
+[RequireComponent(typeof(PhotonView))]
 public class CubeInter : Photon.MonoBehaviour
 {
 	
 	//
-	// NOTE: Network interpolation is afffected by the network sendRate.
+	// NOTE: Network interpolation is affected by the network sendRate.
 	// By default this is 10 times/second for OnSerialize. (See PhotonNetwork.sendIntervalOnSerialize)
 	// Raise the sendrate if you want to lower the interpolationBackTime.
 	//

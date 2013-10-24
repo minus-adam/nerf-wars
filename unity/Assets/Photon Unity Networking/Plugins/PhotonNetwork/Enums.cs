@@ -113,7 +113,8 @@ internal enum JoinType
 {
     CreateGame,
     JoinGame,
-    JoinRandomGame
+    JoinRandomGame,
+    JoinOrCreateOnDemand
 }
 
 
@@ -334,7 +335,7 @@ public enum DisconnectCause
     
     /// <summary>Exception in the receive-loop.
     /// Possible cause: Socket failure.</summary>
-    InternalReceiveException = StatusCode.InternalReceiveException,
+    InternalReceiveException = StatusCode.ExceptionOnReceive,
 
     /// <summary>Server actively disconnected this client.</summary>
     [System.Obsolete("Replaced by clearer: DisconnectByServerTimeout")]

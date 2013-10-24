@@ -23,7 +23,7 @@ using UnityEditor;
 public static class PhotonNetwork
 {
     /// <summary>Version number of PUN. Also used in GameVersion to separate client version from each other.</summary>
-    public const string versionPUN = "1.22.1";
+    public const string versionPUN = "1.24";
 
     /// <summary>
     /// This Monobehaviour allows Photon to run an Update loop.
@@ -383,6 +383,25 @@ public static class PhotonNetwork
 
     private static bool isOfflineMode = false;
     private static bool offlineMode_inRoom = false;
+
+    /// <summary>
+    /// If not null, this is the (exclusive) list of GameObjects that get called by PUN SendMonoMessage().
+    /// </summary>
+    /// <remarks>
+    /// For all callbacks defined in PhotonNetworkingMessage, PUN will use SendMonoMessage and
+    /// call FindObjectsOfType() to find all scripts and GameObjects that might want a callback by PUN.
+    /// 
+    /// PUN callbacks are not very frequent (in-game, property updates are most frequent) but 
+    /// FindObjectsOfType is time consuming and with a large number of GameObjects, performance might
+    /// suffer.
+    /// 
+    /// Optionally, SendMonoMessageTargets can be used to supply a list of target GameObjects. This 
+    /// skips the FindObjectsOfType() but any GameObject that needs callbacks will have to Add itself
+    /// to this list.
+    /// 
+    /// If null, the default behaviour is to do a SendMessage on each GameObject with a MonoBehaviour.
+    /// </remarks>
+    public static HashSet<GameObject> SendMonoMessageTargets;
 
     /// <summary>
     /// The maximum number of players for a room. Better: Set it in CreateRoom.
@@ -810,7 +829,7 @@ public static class PhotonNetwork
         GameObject photonGO = new GameObject();
         photonMono = (PhotonHandler)photonGO.AddComponent<PhotonHandler>();
 
-#if !(UNITY_WINRT || UNITY_WP8)
+#if !(UNITY_WINRT || UNITY_WP8 || UNITY_PS3 || UNITY_WIIU)
         photonGO.AddComponent<PingCloudRegions>();
 #endif
         photonGO.name = "PhotonMono";
@@ -889,14 +908,14 @@ public static class PhotonNetwork
         }
     }
 
-#if !(UNITY_WINRT || UNITY_WP8)
+#if !(UNITY_WINRT || UNITY_WP8 || UNITY_PS3 || UNITY_WIIU)
     /// <summary>
-    /// Connect to the PUN cloud server with the lowest ping.
-    /// Will save the result of pinging all cloud servers in PlayerPrefs. Calling this the first time can take +-2 seconds.
-    /// The ping result can be overridden via PhotonNetwork.OverrideBestCloudServer(..)
+    /// Connect to the Photon Cloud region with the lowest ping (on platforms that support Unity's Ping).
     /// </summary>
     /// <remarks>
-    /// This call can take up to 2 seconds if it is the first time you are using this, all Cloud servers will be pinged to check for the best region.
+    /// Will save the result of pinging all cloud servers in PlayerPrefs. Calling this the first time can take +-2 seconds.
+    /// The ping result can be overridden via PhotonNetwork.OverrideBestCloudServer(..)
+    /// This call can take up to 2 seconds if it is the first time you are using this, all cloud servers will be pinged to check for the best region.
     /// 
     /// The PUN Setup Wizard stores your appID in a settings file and applies a server address/port.
     /// This is used for Connect(string serverAddress, int port, string appID, string gameVersion).
@@ -1004,11 +1023,11 @@ public static class PhotonNetwork
     }
 
     /// <summary>
-    /// Makes this client disconnect from the photon server, a process that leaves any room and calls OnDisconnectedFromPhoton on completition.
+    /// Makes this client disconnect from the photon server, a process that leaves any room and calls OnDisconnectedFromPhoton on completion.
     /// </summary>
     /// <remarks>
-    /// When the client is connected, the server is being informed that this client disconnects. 
-    /// This speeds up leave/disconnect messages for players in the same room as you (otherwise the server would timeout this client's connection).
+    /// When you disconnect, the client will send a "disconnecting" message to the server. This speeds up leave/disconnect 
+    /// messages for players in the same room as you (otherwise the server would timeout this client's connection).
     /// When used in offlineMode, the state-change and event-call OnDisconnectedFromPhoton are immediate. 
     /// Offline mode is set to false as well.
     /// Once disconnected, the client can connect again. Use ConnectUsingSettings.
@@ -1155,28 +1174,44 @@ public static class PhotonNetwork
         }
     }
 
-    /// <summary>
-    /// Join room by room.Name.
-    /// This fails if the room is either full or no longer available (might close at the same time).
-    /// </summary>
-    /// <param name="roomName">The room instance to join (only listedRoom.Name is used).</param>
-    public static void JoinRoom(RoomInfo listedRoom)
+    /// <summary>Join room by roomname and on success calls OnJoinedRoom().</summary>
+    /// <remarks>
+    /// On success, the method OnJoinedRoom() is called on any script. You can implement it to react to joining a room.
+    /// 
+    /// JoinRoom fails if the room is either full or no longer available (it might become empty while you attempt to join).
+    /// Implement OnPhotonJoinRoomFailed() to get a callback in error case.
+    /// 
+    /// To join a room from the lobby's listing, use RoomInfo.name as roomName here.</remarks>
+    /// <see cref="PhotonNetworkingMessage.OnPhotonJoinRoomFailed"/>
+    /// <see cref="PhotonNetworkingMessage.OnJoinedRoom"/>
+    /// <param name="roomName">Unique name of the room to join.</param>
+    public static void JoinRoom(string roomName)
     {
-        if (listedRoom == null)
-        {
-            Debug.LogError("JoinRoom aborted: you passed a NULL room");
-            return;
-        }
-
-        JoinRoom(listedRoom.name);
+        JoinRoom(roomName, false);
     }
 
-    /// <summary>
-    /// Join room with given title.
-    /// This fails if the room is either full or no longer available (might close at the same time).
-    /// </summary>
-    /// <param name="roomName">Unique name of the room to create.</param>
-    public static void JoinRoom(string roomName)
+    /// <summary>Join room by roomName with an option to create it on the fly if not existing.</summary>
+    /// <remarks>
+    /// Join will try to enter a room by roomName. If this room is full or closed, this will fail.
+    /// If the room is not existing, JoinRoom will also fail by default.
+    /// 
+    /// You can set createIfNotExists to true to make the server instantly create the room if it doesn't exist.
+    /// This makes it easier to get into the same room when several players exchanged a roomName already: 
+    /// Any player can try to join or create the room in one step - it doesn't matter who's first.
+    /// 
+    /// OnJoinedRoom() gets called if the room existed and was joined, 
+    /// OnCreatedRoom() gets called if the room didn't exist and this client created it.
+    /// OnPhotonJoinRoomFailed() gets called if the room couldn't be joined or created.
+    /// Implement either in any script in the scene to react to joining/creating a room.
+    /// 
+    /// To join a room from the lobby's listing, use RoomInfo.name as roomName here.</remarks>
+    /// 
+    /// <see cref="PhotonNetworkingMessage.OnPhotonJoinRoomFailed"/>
+    /// <see cref="PhotonNetworkingMessage.OnJoinedRoom"/>
+    /// 
+    /// <param name="roomName">Unique name of the room to join (or create if createIfNotExists is true).</param>
+    /// <param name="createIfNotExists">If true, the server will attempt to create a room, making the success callback OnCreatedRoom().</param>
+    public static void JoinRoom(string roomName, bool createIfNotExists)
     {
         if (connectionStateDetailed == PeerState.Joining || connectionStateDetailed == PeerState.Joined || connectionStateDetailed == PeerState.ConnectedToGameserver)
         {
@@ -1199,7 +1234,7 @@ public static class PhotonNetwork
             }
             else
             {
-                networkingPeer.OpJoin(roomName);
+                networkingPeer.OpJoin(roomName, createIfNotExists);
             }
         }
     }
