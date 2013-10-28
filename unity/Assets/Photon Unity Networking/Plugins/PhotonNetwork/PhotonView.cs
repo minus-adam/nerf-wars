@@ -16,7 +16,7 @@ using UnityEditor;
 #endif
 
 
-public enum ViewSynchronization { Off, ReliableDeltaCompressed, Unreliable }
+public enum ViewSynchronization { Off, ReliableDeltaCompressed, Unreliable, UnreliableOnChange }
 public enum OnSerializeTransform { OnlyPosition, OnlyRotation, OnlyScale, PositionAndRotation, All }
 public enum OnSerializeRigidBody { OnlyVelocity, OnlyAngularVelocity, All }
 
@@ -42,6 +42,7 @@ public class PhotonView : Photon.MonoBehaviour
     
     public int group = 0;
 
+    protected internal bool mixedModeIsReliable = false;
 
     // NOTE: this is now an integer because unity won't serialize short (needed for instantiation). we SEND only a short though!
     // NOTE: prefabs have a prefixBackup of -1. this is replaced with any currentLevelPrefix that's used at runtime. instantiated GOs get their prefix set pre-instantiation (so those are not -1 anymore)

@@ -1,5 +1,7 @@
+using ExitGames.Client.Photon;
 using UnityEngine;
 using System.Collections;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class IELdemo : MonoBehaviour
 {

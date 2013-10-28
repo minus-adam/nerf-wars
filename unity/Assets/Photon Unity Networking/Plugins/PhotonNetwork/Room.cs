@@ -9,6 +9,7 @@
 // ----------------------------------------------------------------------------
 
 using ExitGames.Client.Photon;
+using UnityEngine;
 
 
 /// <summary>
@@ -218,5 +219,21 @@ public class Room : RoomInfo
         Hashtable customProps = propertiesToSet.StripToStringKeys() as Hashtable;
 		PhotonNetwork.networkingPeer.OpSetCustomPropertiesOfRoom(customProps, true, 0);
 		NetworkingPeer.SendMonoMessage(PhotonNetworkingMessage.OnPhotonCustomRoomPropertiesChanged);
+    }
+
+    /// <summary>
+    /// Enables you to define the properties available in the lobby if not all properties are needed to pick a room.
+    /// </summary>
+    /// <remarks>
+    /// It makes sense to limit the amount of properties sent to users in the lobby as this improves speed and stability.
+    /// </remarks>
+    /// <param name="propsListedInLobby">An array of custom room property names to forward to the lobby.</param>
+    public void SetPropertiesListedInLobby(string[] propsListedInLobby)
+    {
+        Hashtable customProps = new Hashtable();
+        customProps[GameProperties.PropsListedInLobby] = propsListedInLobby;
+        PhotonNetwork.networkingPeer.OpSetPropertiesOfRoom(customProps, false, 0);
+
+        this.propertiesListedInLobby = propsListedInLobby;
     }
 }

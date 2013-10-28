@@ -34,7 +34,7 @@ public class PunStartup : MonoBehaviour
             bool ret = EditorApplication.OpenScene(demoBasePath + demoPaths[0]);
             if (ret)
             {
-                Debug.Log("No scene was open. Loaded PUN Demo Hub. " + EditorApplication.currentScene);
+                Debug.Log("No scene was open. Loaded PUN Demo Hub. Delete script 'PunStartup' to avoid this step.");
                 Selection.activeObject = AssetDatabase.LoadMainAssetAtPath(demoBasePath + demoPaths[0]);
             }
         }
@@ -43,7 +43,7 @@ public class PunStartup : MonoBehaviour
         {
             SetPunDemoBuildSettings();
 
-            Debug.Log("Applied new scenes to build settings.");
+            Debug.Log("Applied new scenes to build settings. Delete script 'PunStartup' to avoid this step.");
         }
 	}
 

@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet_prefab: {fileID: 100006, guid: a8b64e5ae94454dcf8eced4de9379263, type: 2}
   bulletImpulse: 20
-  bulletMax: 5
+  bulletMax: 20
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,6 +332,8 @@ MonoBehaviour:
   crchSpeed: 3
   runSpeed: 20
   speed: 0
+  runTime: 5
+  runCoolDownTime: 5
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

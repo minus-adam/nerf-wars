@@ -1,5 +1,5 @@
 * release_history.txt
-* Release history for the DotNet Photon Client Library (DotNet / Unity3D / Windows 8 RT / Windows Phone 8 / Windows Phone 7.5 / PlayStation Mobile)
+* Release history for the DotNet Photon Client Library (DotNet / Unity3D / Windows 8 RT / Windows Phone 8 / PlayStation Mobile)
   (C) 2013 Exit Games GmbH, http://www.exitgames.com
 
 Questions? Visit:
@@ -8,26 +8,47 @@ Questions? Visit:
     http://forum.exitgames.com
 
 
-*** Version 3.2.1.5 (06.08.2013 - rev2242)
-Added: Steam and Facebook entries to CustomAuthenticationType enum.
-Fixed: Potential nullreference exception in TCP SendAcksOnly() code. If called before Connect(), this always failed.
-Updated: Replacement classes for datatypes not supported on some platforms (Hashtable mostly).
-  Added: Hashtable got a new GetEnumerator that returns a IDictionary just like the standard Hashtable does.
-  Changed: Constructor with int InitialSize now calls the matching base constructor.
-  Removed: Synchronized() method which didn't do much and is not used.
-  Changed: ToString is now an override instead a "new" method.
-  Changed: DataTypes.cs: the Stopwatch is only implemented for Silverlight (non Windows Phone 8)
-  Updated: Description.
-Changed: Protocol to expect Hashtable always providing a DictionaryEntry. Related to change in DataTypes.cs.
-Changed: Protocol now has conditional "Dictionary" detection. In WP8 the API is different for that. Uses #if WINDOWS_PHONE. same file now works in W8 and WP8.
-Changed: Removed PRPCAttribute from SupportClass.cs. This is used only in PUN and needs conditional per-platform compilation anyways, so it gets implemented there.
-Removed: surplus debug output in ReceiveIncomingCommands().
-Fixed: Debug output in FetchServerTimestamp() depended on the Thread calling the method. Correct: The output is enqueued and dispatched later on.
-Fixed: FetchServerTimestamp no longer fails with a SendError when the state is not "Connected".
-Internal: Metro-Alike project now uses DataTypes.cs of Silverlight (like everyone else). Removed surplus copy.
-Internal: DataTypes.cs and Protocol.cs files can now be used in DotNet 3.5, Windows Store and Windows 8 Phone.
-Internal: outdated compiler-definitions "Photon" and "METROALIKE".
+*** Version 3.2.2.1 (17. October 2013 - rev2335)
+    Note: This lib contains a lot of breaking changes and socket handling has been refactored. By now, this is well tested and confirmed working.
+    Changed: The way sockets are handled and added native-socket-lib support. There is a new IPhotonSocket interface which even allows to use external classes as socket wrapper.
+    Added: SocketImplementation property to set a class as socket implementation (Unity. sets native implementation or c# socket at compile time)
+    Changed: Win 8 RT and Phone now use fewer separate classes and files. Instead, more files from the (regular) DotNet client are used. RT and Phone are now part of the trunk folder in our SVN.
+    Added: TrafficStats.TimestampOfLastAck and .TimestampOfLastReliableCommand
+    Changed: Handling of server-side shutdown (a form of TCP disconnect) is now handled specifically as server-side-disconnect (was: generic receive exception)
+    Added: If a UDP connection times out in a client, it sends a special flag in it's disconnect command (to the server). This enables us to detect which side is triggering timeouts more often (and we can improve things).
+LoadBalancing API    
+    Fixed: issue where we called a virtual member from a constructor (http://confluence.jetbrains.com/display/ReSharper/Virtual+method+call+in+constructor)
+    Changed: LocalPlayer is now a property which checks null and returns a new Player (via virtual CreatePlayer) on demand.
+	Added: OpJoinRoom now optionally creates a room if parameter "createIfNotExists" is set to true and the room didn't exist. Room properties can't be set "on create" this way. LocalPlayer.IsMasterClient will be true.
+    Added: When OpJoinRoom can create a room, it also won't define which properties go into the lobby. You can use the new Room.SetPropertiesListedInLobby().
+    Added: You can pass a actorNumber to OpJoinRoom when you re-enter a room and want to reclaim a specific actorNumber in that room. In best case, the client can re-join after a disconnect/crash and seamlessly go on playing.
 
+
+*** Version 3.2.1.6 (15. August 2013 - rev2272)
+    Changed: The library for Unity now contains a ExitGames.Client.Photon.Hashtable to be compatible with Win 8 exports. This must be used from now on!
+        Note: In Unity, the compiler will complain about ambiguous Hashtable definitions. To solve this, add this to the "using" part of your code: using Hashtable = ExitGames.Client.Photon.Hashtable;
+    Removed: Builds for Silverlight and Windows Phone 7.1 (this is not affecting Windows 8 RT and Windows 8 Phone SDKs which are of course supported)
+    Fixed: A null-reference check for a TCP connection's SendAcksOnly().
+
+*** Version 3.2.1.5 (06.08.2013 - rev2242)
+    Added: Steam and Facebook entries to CustomAuthenticationType enum.
+    Fixed: Potential nullreference exception in TCP SendAcksOnly() code. If called before Connect(), this always failed.
+    Updated: Replacement classes for datatypes not supported on some platforms (Hashtable mostly).
+      Added: Hashtable got a new GetEnumerator that returns a IDictionary just like the standard Hashtable does.
+      Changed: Constructor with int InitialSize now calls the matching base constructor.
+      Removed: Synchronized() method which didn't do much and is not used.
+      Changed: ToString is now an override instead a "new" method.
+      Changed: DataTypes.cs: the Stopwatch is only implemented for Silverlight (non Windows Phone 8)
+      Updated: Description.
+    Changed: Protocol to expect Hashtable always providing a DictionaryEntry. Related to change in DataTypes.cs.
+    Changed: Protocol now has conditional "Dictionary" detection. In WP8 the API is different for that. Uses #if WINDOWS_PHONE. same file now works in W8 and WP8.
+    Changed: Removed PRPCAttribute from SupportClass.cs. This is used only in PUN and needs conditional per-platform compilation anyways, so it gets implemented there.
+    Removed: surplus debug output in ReceiveIncomingCommands().
+    Fixed: Debug output in FetchServerTimestamp() depended on the Thread calling the method. Correct: The output is enqueued and dispatched later on.
+    Fixed: FetchServerTimestamp no longer fails with a SendError when the state is not "Connected".
+    Internal: Metro-Alike project now uses DataTypes.cs of Silverlight (like everyone else). Removed surplus copy.
+    Internal: DataTypes.cs and Protocol.cs files can now be used in DotNet 3.5, Windows Store and Windows 8 Phone.
+    Internal: outdated compiler-definitions "Photon" and "METROALIKE".
 
 *** Version 3.2.1.4 (10.07.2013 - rev2209)
     Added: "Typed Lobby" API. Photon Cloud and Loadbalancing now support multiple lobbies per app/title. Also, different types of lobbies are now possible, each can have different options and different rules for matchmaking.

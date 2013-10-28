@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuiRect:
+    serializedVersion: 2
     x: 0
     y: 0
     width: 0
@@ -378,6 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuiRect:
+    serializedVersion: 2
     x: 640
     y: 100
     width: 640
@@ -394,6 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GuiRect:
+    serializedVersion: 2
     x: 0
     y: 0
     width: 0
