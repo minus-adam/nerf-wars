@@ -1,0 +1,7 @@
+tPose 		=	0-2
+pistolGrip	=	2-4
+walk		=	8-31
+crouch		=	
+crawl		=	
+jump		=	
+land		=	
