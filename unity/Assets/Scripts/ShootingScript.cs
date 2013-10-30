@@ -4,7 +4,7 @@ using System.Collections;
 public class ShootingScript : MonoBehaviour {
 	
 	public GameObject bullet_prefab;
-	public float bulletImpulse = 20f;
+	public float bulletImpulse = 40f;
 	public int bulletMax = 5;
 	private int bulletCount;
 	public Transform shooter;
