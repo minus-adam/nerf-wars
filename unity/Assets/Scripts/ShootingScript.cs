@@ -7,6 +7,7 @@ public class ShootingScript : MonoBehaviour {
 	public float bulletImpulse = 20f;
 	public int bulletMax = 5;
 	private int bulletCount;
+	public Transform shooter;
 	 
 
 	// Use this for initialization
@@ -24,6 +25,8 @@ public class ShootingScript : MonoBehaviour {
 				Camera cam = Camera.main;
 				GameObject thebullet = (GameObject)Instantiate(bullet_prefab, cam.transform.position + cam.transform.forward *3, cam.transform.rotation);
 				thebullet.rigidbody.AddForce( cam.transform.forward * bulletImpulse, ForceMode.Impulse);
+				thebullet.GetComponent<BulletScript>().shooter = shooter;
+				gameObject.GetComponent<PlayerInfo>().AddShotTaken();
 				bulletCount--;
 			}
 		}
