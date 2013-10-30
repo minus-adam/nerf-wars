@@ -58,7 +58,7 @@ public class CrouchAndRun : MonoBehaviour
 			}
 		}
        	
-		float vScale = 2.0f;
+		float vScale = 2.5f;
         
  		speed = walkSpeed;
         if ((Input.GetKey("left shift") || Input.GetKey("right shift")) && chMotor.grounded)

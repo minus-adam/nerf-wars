@@ -4,6 +4,7 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
 	
 	float lifeSpan = 5;
+	public Transform shooter;
 	
 	// Use this for initialization
 	void Start () {
@@ -20,18 +21,19 @@ public class BulletScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnCollisionEnter(Collision collision) {
-		Debug.Log("Hit something");
 		
 		if(collision.gameObject.tag == "Monitor") {
-			Debug.Log("Hi");
 			var stickyJoint = gameObject.AddComponent<FixedJoint>();
 			stickyJoint.connectedBody = collision.rigidbody;
 		}
 		
 		if(collision.gameObject.tag == "Enemy" ) {
 			collision.gameObject.GetComponent<Enemy>().health -= 1;
+			shooter.GetComponent<PlayerInfo>().AddHit();
+			shooter.GetComponent<PlayerInfo>().UpdateHitAccuracy();
 			if(collision.gameObject.GetComponent<Enemy>().health <= 0) {
 				Destroy(collision.gameObject);
+				shooter.GetComponent<PlayerInfo>().AddKill();
 			}
 		}
 		
