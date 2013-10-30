@@ -14310,7 +14310,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 518144f353c1744d392c1f7b6be97a6c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.53999996
+      value: 2.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 518144f353c1744d392c1f7b6be97a6c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14368,6 +14368,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 518144f353c1744d392c1f7b6be97a6c, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: 518144f353c1744d392c1f7b6be97a6c, type: 2}
+      propertyPath: shooter
+      value: 
+      objectReference: {fileID: 1166380152}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 518144f353c1744d392c1f7b6be97a6c, type: 2}
   m_RootGameObject: {fileID: 1166380151}
@@ -19369,7 +19377,7 @@ Transform:
   m_PrefabInternal: {fileID: 1162874875}
   m_GameObject: {fileID: 547483473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0330908298, y: 1.12506413, z: .004364416}
+  m_LocalPosition: {x: 12.1985874, y: 1.12506413, z: .004364416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25511,6 +25519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991b2b051ae0a462780348d8af76cfda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shooter: {fileID: 0}
 --- !u!136 &702621922
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29896,6 +29905,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.28999996, y: 3.5999999, z: 8.17000008}
   m_Center: {x: -.330000013, y: 2.03999996, z: 0}
+--- !u!1 &806983584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 806983585}
+  - 114: {fileID: 806983586}
+  m_Layer: 0
+  m_Name: GamePrefLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806983585
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 806983584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.3153763, y: 1.40521622, z: 8.58238792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &806983586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 806983584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c5b84abfe964e7fb442e7b2e5ddf33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &808427783
 GameObject:
   m_ObjectHideFlags: 0
@@ -43808,7 +43855,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 426aa6c4d4ff14cd99f57ec3b767d1a2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .0330908298
+      value: 12.1985874
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 426aa6c4d4ff14cd99f57ec3b767d1a2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -43938,9 +43985,10 @@ GameObject:
   - 148: {fileID: 1166380155}
   - 114: {fileID: 1166380154}
   - 114: {fileID: 1166380153}
+  - 114: {fileID: 1166380160}
   m_Layer: 0
   m_Name: First Person Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43952,7 +44000,7 @@ Transform:
   m_PrefabInternal: {fileID: 407380170}
   m_GameObject: {fileID: 1166380151}
   m_LocalRotation: {x: 0, y: -.603294134, z: 0, w: .79751879}
-  m_LocalPosition: {x: -4.49598789, y: 2.53999996, z: 46.9922485}
+  m_LocalPosition: {x: -4.49598789, y: 2.0999999, z: 46.9922485}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 1491958743}
@@ -43992,6 +44040,7 @@ MonoBehaviour:
   bullet_prefab: {fileID: 100000, guid: d464ffd89423e4b92bb0b2acec74df85, type: 2}
   bulletImpulse: 20
   bulletMax: 20
+  shooter: {fileID: 1166380152}
 --- !u!148 &1166380155
 NetworkView:
   m_ObjectHideFlags: 0
@@ -44107,6 +44156,18 @@ CharacterController:
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1166380160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166380151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6598433318b480ab95f183d14c3df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 5
 --- !u!1 &1167126893
 GameObject:
   m_ObjectHideFlags: 0
@@ -69042,6 +69103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991b2b051ae0a462780348d8af76cfda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shooter: {fileID: 0}
 --- !u!54 &1885030173
 Rigidbody:
   m_ObjectHideFlags: 0
