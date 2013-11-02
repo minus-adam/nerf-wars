@@ -11,6 +11,7 @@ public class PlayerInfo : MonoBehaviour {
  
 	// Use this for initialization
 	void Start () {
+		spawn();
 	
 	}
 	
@@ -38,5 +39,18 @@ public class PlayerInfo : MonoBehaviour {
 		} else {
 			hitAccuracy = 0;
 		}
+	}
+	
+	public void spawn() {
+		Transform spawnLocation;
+		if(Globals.isMulti) {
+			spawnLocation = GameObject.FindGameObjectWithTag("Spawn").GetComponent<SpawnScript>().getSpawnLocation();
+		} else {
+			spawnLocation = GameObject.FindGameObjectWithTag("Spawn").GetComponent<SpawnScript>().getSpawnLocation();
+
+		}
+		gameObject.transform.position =  spawnLocation.position;
+		gameObject.transform.Rotate(spawnLocation.transform.rotation.eulerAngles);
+ 
 	}
 }

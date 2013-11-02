@@ -15,9 +15,10 @@ GameObject:
   - 148: {fileID: 14800000}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400016}
   m_Layer: 0
   m_Name: First Person Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,9 +82,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: .713669181, z: 0, w: .700482965}
-  m_LocalPosition: {x: -52.4235687, y: 3.25786257, z: -8.17541504}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -.603294134, z: 0, w: .79751879}
+  m_LocalPosition: {x: -4.49598789, y: 2.0999999, z: 46.9922485}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 400004}
   - {fileID: 400002}
@@ -314,10 +315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ec4e8bcc9f4f348d0fbeb0981d81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet_prefab: {fileID: 100006, guid: a8b64e5ae94454dcf8eced4de9379263, type: 2}
-  bulletImpulse: 50
+  bullet_prefab: {fileID: 100000, guid: d464ffd89423e4b92bb0b2acec74df85, type: 2}
+  bulletImpulse: 40
   bulletMax: 20
-  shooter: {fileID: 0}
+  shooter: {fileID: 400000}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,6 +336,18 @@ MonoBehaviour:
   speed: 0
   runTime: 5
   runCoolDownTime: 5
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6598433318b480ab95f183d14c3df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 5
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -349,13 +362,13 @@ CharacterController:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Height: 4
+  m_Height: 2
   m_Radius: .400000006
   m_SlopeLimit: 45
   m_StepOffset: .400000006
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: -1, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!148 &14800000
 NetworkView:
   m_ObjectHideFlags: 1

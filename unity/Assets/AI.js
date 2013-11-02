@@ -5,6 +5,11 @@
     var moveSpeed = 5.0;
     var damping = 6.0;
     private var isItAttacking = false;
+    
+    
+    function Start () {
+    	target = GameObject.FindGameObjectWithTag("TeamOne").transform;
+    }
  
     function Update () 
     {
