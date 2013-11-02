@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11400016}
   m_Layer: 0
   m_Name: First Person Controller
-  m_TagString: Player
+  m_TagString: TeamOne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: -.603294134, z: 0, w: .79751879}
+  m_LocalRotation: {x: 0, y: -.945090234, z: 0, w: -.326809555}
   m_LocalPosition: {x: -4.49598789, y: 2.0999999, z: 46.9922485}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
@@ -319,6 +319,7 @@ MonoBehaviour:
   bulletImpulse: 40
   bulletMax: 20
   shooter: {fileID: 400000}
+  cam: {fileID: 2000000}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
