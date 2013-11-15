@@ -27,7 +27,7 @@ public class BulletScript : MonoBehaviour {
 			stickyJoint.connectedBody = collision.rigidbody;
 		}
 		
-		if(collision.gameObject.tag == "Enemy" ) {
+		if(collision.gameObject.tag == Tags.TEAMTWO ) {
 			collision.gameObject.GetComponent<Enemy>().health -= 1;
 			shooter.GetComponent<PlayerInfo>().AddHit();
 			shooter.GetComponent<PlayerInfo>().UpdateHitAccuracy();
