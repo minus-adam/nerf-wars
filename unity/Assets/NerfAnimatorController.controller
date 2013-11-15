@@ -7,35 +7,7 @@ AnimatorController:
   m_PrefabInternal: {fileID: 0}
   m_Name: NerfAnimatorController
   serializedVersion: 2
-  m_AnimatorParameters:
-  - m_Name: AngularSpeed
-    m_Type: 1
-    m_DefaultVector: {x: 0, y: 0, z: 0}
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Speed
-    m_Type: 1
-    m_DefaultVector: {x: 0, y: 0, z: 0}
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Shot
-    m_Type: 1
-    m_DefaultVector: {x: 0, y: 0, z: 0}
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: PlayerInSight
-    m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+  m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -89,18 +61,56 @@ BlendTree:
   m_MaxThreshold: 3
   m_UseAutomaticThresholds: 0
   m_BlendType: 3
+--- !u!206 &20641327
+BlendTree:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: walk
+  m_Childs:
+  - m_Motion: {fileID: 7400002, guid: 6b1d5b7074f6f2040a509b4e3ceb8ed2, type: 3}
+    m_Threshold: 0
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_IsAnim: 1
+    m_Mirror: 0
+  m_BlendParameter: Blend
+  m_BlendParameterY: Blend
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_BlendType: 2
+--- !u!1101 &110100000
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110200000}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1102 &110200000
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Locomotion
+  m_Name: walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 20600000}
+  - {fileID: 20641327}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 319, y: -45, z: 0}
+  m_Position: {x: 341, y: -57, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -116,7 +126,14 @@ StateMachine:
   - {fileID: 110200000}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
-  m_OrderedTransitions: {}
+  m_OrderedTransitions:
+    data:
+      first: {fileID: 0}
+      second: []
+    data:
+      first: {fileID: 0}
+      second:
+      - {fileID: 110100000}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
