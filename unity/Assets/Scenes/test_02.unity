@@ -11452,6 +11452,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11100000, guid: 0397f035141b343c8b203947306a7b0e, type: 2}
+      propertyPath: m_Animations.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: 0397f035141b343c8b203947306a7b0e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 13.3324394
@@ -11480,6 +11484,22 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 0397f035141b343c8b203947306a7b0e, type: 2}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
+    - target: {fileID: 11100000, guid: 0397f035141b343c8b203947306a7b0e, type: 2}
+      propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 0397f035141b343c8b203947306a7b0e, type: 2}
+      propertyPath: m_Animations.Array.data[3]
+      value: 
+      objectReference: {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
+    - target: {fileID: 11100000, guid: 0397f035141b343c8b203947306a7b0e, type: 2}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0397f035141b343c8b203947306a7b0e, type: 2}
   m_RootGameObject: {fileID: 1968941622}
@@ -40945,7 +40965,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 8252459a448264cc08010597671931d0, type: 2}
   m_PrefabInternal: {fileID: 1182786103}
   m_GameObject: {fileID: 1015825772}
-  m_LocalRotation: {x: .00403299741, y: .990308881, z: -.00157840492, w: -.138814673}
+  m_LocalRotation: {x: .00403299788, y: .99030894, z: -.00157840503, w: -.138814688}
   m_LocalPosition: {x: 12.6119614, y: -.0576086044, z: -89.0028992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -78223,12 +78243,15 @@ Animation:
   m_GameObject: {fileID: 1968941622}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400016, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
+  m_Animation: {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
   m_Animations:
-  - {fileID: 7400016, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
+  - {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 0
   m_UserAABB:
     m_Center: {x: 0, y: 0, z: 0}
