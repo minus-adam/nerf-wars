@@ -193,6 +193,7 @@ ModelImporter:
     400186: Spine2
     4300000: soldier_Military_Male_Lod_1
     7400000: army_walk
+    7400002: aim_pistol
     9500000: //RootNode
     11100000: //RootNode
     13700000: soldier_Military_Male_Lod_1
@@ -212,12 +213,33 @@ ModelImporter:
     - name: army_walk
       takeName: Take 001
       firstFrame: 10
-      lastFrame: 26
+      lastFrame: 25
       wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 1
       loop: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    - name: aim_pistol
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 30.1000023
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 2
+      loop: 0
       loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
