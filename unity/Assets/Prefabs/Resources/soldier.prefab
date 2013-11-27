@@ -1133,6 +1133,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!95 &9500000
 Animator:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1143,6 +1144,7 @@ Animator:
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -1151,16 +1153,16 @@ Animation:
   m_GameObject: {fileID: 100068}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400016, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
+  m_Animation: {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
   m_Animations:
-  - {fileID: 7400016, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
+  - {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 7400000, guid: f4dd035bfb7b8944fbe03e790b0d26b7, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 0
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1186,12 +1188,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   follow: {fileID: 11400006}
   shootingDistance: 20
+  animation: {fileID: 0}
   bullet_prefab: {fileID: 100000, guid: d464ffd89423e4b92bb0b2acec74df85, type: 2}
   bulletImpulse: 40
   bulletMax: 400
   shooter: {fileID: 400068}
   gun: {fileID: 100000}
   shootingRefresh: .5
+  shoulder: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1217,6 +1221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  locationA: {fileID: 0}
+  locationB: {fileID: 0}
+  playerFocusDistance: 35
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1248,6 +1255,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -1284,6 +1294,7 @@ SkinnedMeshRenderer:
   - {fileID: 400050}
   - {fileID: 400074}
   - {fileID: 400030}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 400004}
   m_AABB:
     m_Center: {x: 0, y: -.0731457472, z: -.00472455472}
@@ -1297,7 +1308,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 100068}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

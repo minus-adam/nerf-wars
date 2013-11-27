@@ -6,7 +6,7 @@ public class EnemyShootingScript : MonoBehaviour {
 	public Follow follow;
 	public float shootingDistance;
 	private float playerDistance;
-	
+	public Animation animation;
 	public GameObject bullet_prefab;
 	public float bulletImpulse = 40f;
 	public int bulletMax = 5;
@@ -16,6 +16,8 @@ public class EnemyShootingScript : MonoBehaviour {
 	private float damping = 6.0f;
 	private bool canShoot = true;
 	public float shootingRefresh = 1f;
+	AnimationState mixAnimation;
+	public Transform shoulder;
 	// Use this for initialization
 	void Awake () {
 		follow = GetComponent<Follow>();
@@ -34,6 +36,8 @@ public class EnemyShootingScript : MonoBehaviour {
 			
 			playerDistance = Vector3.Distance(transform.position,follow.player.position);
 			if(playerDistance < shootingDistance) {
+				//PistolGrip();
+				// TODO this needs work
 				if(bulletCount > 0 && canShoot) {
 					Debug.Log ("Get Here");
 				
@@ -55,4 +59,12 @@ public class EnemyShootingScript : MonoBehaviour {
 		}
 	
 	}
+	
+	void PistolGrip() {
+		
+		animation.Play("aim_pistol");
+		
+	}
+	
+
 }
